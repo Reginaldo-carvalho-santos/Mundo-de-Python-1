@@ -2,20 +2,25 @@
 entre 0 e 5 e peça para o usuário tentar descobrir qual foi o número escolhido pelo computador.
 O programa deverá escrever na tela se o usuário venceu ou perdeu.
 '''
-from random import choice
+from random import randint
+from time import sleep
 
-num = int(input('informe um numero: '))
+computador = randint(0, 5)  # faz randomiza(sorteio) o numero de 0 a 5,
 
-lista = [0,1,2,3,4,5]
+print('-='*28 )
 
-computador = choice(lista)
+print('Vou pensar em um número entre 0 e 5. Tente adivinhar!')
 
-if num == computador:
-    
-    print('o numero sorteado foi {} e seu foi {}'.format(num,computador))
-    print('Parabéns,vc acertou!')
-    
-else :
-    print('vc perdeu! tente de novo')
-    print('o numero sorteado foi {} e seu foi {}'.format(computador,num))
+print('-='*28)
 
+jogador = int(input('Em que número eu pensei ❓: '))
+
+print('PROCESSANDO!')
+sleep(3)
+
+if jogador == computador:
+
+    print(f'Pensamos no mesmo número {computador}. PRABÈNS vc me ganhou')
+
+else:
+    print(f'Pensei no número {computador} e não no número {jogador}. Vc perdeu! Tente de novo')
