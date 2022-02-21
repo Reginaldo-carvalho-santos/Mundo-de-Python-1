@@ -1,3 +1,5 @@
 {
-    "workbench.colorTheme": "Space - Dark Default"
+    "workbench.colorTheme": "Space - Dark Default",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
